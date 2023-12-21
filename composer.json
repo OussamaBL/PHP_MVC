@@ -1,0 +1,17 @@
+{
+    "name": "youcode/mvc",
+    "autoload": {
+        "psr-4": {
+            "MVC\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Oussama Bel-kaze",
+            "email": "oussamaazrour@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
