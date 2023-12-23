@@ -1,11 +1,18 @@
 <?php
 
 namespace MVC\Model;
-use app\connexion\connexion;
-use MVC\interfaces\Crud as CrudInterface;
 
-class Crud implements CrudInterface
+use MVC\connexion\connexion;
+use MVC\interfaces\Crud as CrudInterface;
+use PDO;
+
+abstract class Crud implements CrudInterface
 {
+    public function __construct()
+    {
+        new connexion();
+    }
+
     public function insert(string $table,array $data):int
     {
         $columns = implode(', ', array_keys($data));
@@ -24,6 +31,15 @@ class Crud implements CrudInterface
         $stmt->execute([$id]);
 
         return $stmt->fetch(PDO::FETCH_OBJ);
+    }
+    public function selectAll(string $table):array
+    {
+        $sql = "SELECT * FROM $table";
+        $stmt = connexion::$pdo->prepare($sql);
+        $stmt->execute();
+
+        //return $stmt->fetch(PDO::FETCH_OBJ);
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function update(string $table,int $id,array $data):int

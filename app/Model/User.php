@@ -17,6 +17,7 @@ class User extends CrudAlias
      */
     public function __construct(string $name, string $email, int $age,int $id=null)
     {
+        parent::__construct();
         $this->id = $id;
         $this->name = $name;
         $this->email = $email;
