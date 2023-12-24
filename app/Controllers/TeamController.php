@@ -46,8 +46,12 @@ class TeamController extends Controller
         $team->show();
         $this->render("views","edit_team","Modifier equipe",$team);
     }
-    public function edit($id):void{
-
+    public function edit(int $id):void{
+        $team=new Team($_POST['name'],$_POST['cups'],$id);
+        $team->edit();
+        $teams=new Team;
+        $teams=$teams->showAllTeams();
+        $this->render("views","home","liste des equipes",$teams);
     }
 
 }

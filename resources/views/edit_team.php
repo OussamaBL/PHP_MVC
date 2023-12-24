@@ -18,7 +18,7 @@ $team=$result;
     <div class="large-12 columns">
         <h1>Table d'equipe</h1>
         <p><a href="/mvc/Team/index/" ><i class="fa fa-plus-square"></i>Equipes</a></p>
-        <form action="Team/edit/<?= $team->getId() ?>" method="POST">
+        <form action="/mvc/Team/edit/<?= $team->getId() ?>" method="POST">
             <table>
                 <tr>
                     <td>Name</td>
