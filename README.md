@@ -12,11 +12,11 @@ List any prerequisites or dependencies that need to be installed before running 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/your-mvc-project.git
+   git clone https://github.com/OussamaBL/PHP_MVC
 
 2. Navigate to the project directory:
     ```bash
-    cd your-mvc-project
+    cd mvc
 
 3. Install dependencies using Composer:
     ```bash
