@@ -4,7 +4,7 @@ namespace MVC\Routes;
 
 class Route
 {
-    private string $controller = 'app\Controller\homeController';
+    private string $controller = 'MVC\Controllers\HomeController';
     private string $method = 'index';
     private array $params = array();
 

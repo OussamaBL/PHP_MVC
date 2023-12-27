@@ -32,6 +32,7 @@ abstract class Crud implements CrudInterface
 
         return $stmt->fetch(PDO::FETCH_OBJ);
     }
+
     public function selectAll(string $table):array
     {
         $sql = "SELECT * FROM $table";
